@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 20, 20, 20;
+  --primary-color: 255, 193, 7;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, rgb(var(--background-start-rgb)), rgb(var(--background-end-rgb)));
+  min-height: 100vh;
+}
+
+.nav-link {
+  @apply px-4 py-2 transition-colors duration-300 hover:text-amber-400;
+}
+
+.nav-link.active {
+  @apply bg-amber-500 text-black font-medium;
+}
+
+.hero-title {
+  @apply text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight;
+}
+
+.hero-highlight {
+  @apply text-amber-500;
+}
+
+.btn-primary {
+  @apply bg-amber-500 hover:bg-amber-600 text-black font-bold py-3 px-8 transition-all duration-300 inline-block;
+}
