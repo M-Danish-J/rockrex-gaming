@@ -22,7 +22,7 @@ export default function Games() {
           {/* Background Image */}
           <div className="absolute inset-0">
             <Image
-              src="/placeholder.svg?height=800&width=1920&text=Our+Games"
+              src="/banner.png"
               alt="Our Games Hero"
               fill
               priority

@@ -15,7 +15,7 @@ export default function Contact() {
           {/* Background Image */}
           <div className="absolute inset-0">
             <Image
-              src="/placeholder.svg?height=800&width=1920&text=Contact+Us"
+              src="/banner.png"
               alt="Contact Us Hero"
               fill
               priority

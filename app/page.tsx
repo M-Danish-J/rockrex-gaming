@@ -12,11 +12,11 @@ export default function Home() {
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/placeholder.svg?height=1080&width=1920"
+          src="/image3.png"
           alt="Gaming background"
           fill
           priority
-          className="object-cover"
+          className="object-fill"
         />
       </div>
 
@@ -140,7 +140,7 @@ export default function Home() {
 
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=600&width=600&text=Team"
+                src="/image1.jpg"
                 alt="Our team"
                 width={600}
                 height={600}

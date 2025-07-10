@@ -15,7 +15,7 @@ export default function About() {
           {/* Background Image */}
           <div className="absolute inset-0">
             <Image
-              src="/placeholder.svg?height=800&width=1920&text=About+Us"
+              src="/banner.png"
               alt="About Us Hero"
               fill
               priority
