@@ -12,9 +12,9 @@ export default function Header() {
         <Link href="https://linkedin.com" className="mx-2 hover:text-amber-400">
           <Linkedin size={16} />
         </Link>
-        <Link href="mailto:hi@rockrexgames.com" className="mx-2 hover:text-amber-400 flex items-center">
+        <Link href="mailto:rockrexgames@gmail.com" className="mx-2 hover:text-amber-400 flex items-center">
           <Mail size={16} className="mr-1" />
-          hi@rockrexgames.com
+          rockrexgames@gmail.com
         </Link>
       </div>
 

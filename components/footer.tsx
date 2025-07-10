@@ -90,8 +90,8 @@ export default function Footer() {
               <p className="mb-2">San Francisco, CA 94107</p>
               <p className="mb-2">United States</p>
               <p className="mb-2">
-                <a href="mailto:hi@rockrexgames.com" className="hover:text-amber-400">
-                  hi@rockrexgames.com
+                <a href="mailto:rockrexgames@gmail.com" className="hover:text-amber-400">
+                  rockrexgames@gmail.com
                 </a>
               </p>
             </address>

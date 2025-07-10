@@ -62,7 +62,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-bold mb-1">Email Us</h3>
-                    <p className="text-gray-300">hi@rockrexgames.com</p>
+                    <p className="text-gray-300">rockrexgames@gmail.com</p>
                   </div>
                 </div>
 

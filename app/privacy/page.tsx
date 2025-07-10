@@ -14,7 +14,7 @@ export default function Privacy() {
           {/* Background Image */}
           <div className="absolute inset-0">
             <Image
-              src="/placeholder.svg?height=800&width=1920&text=Privacy+Policy"
+              src="/banner.png"
               alt="Privacy Policy Hero"
               fill
               priority
@@ -132,7 +132,7 @@ export default function Privacy() {
                 <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
                 <p className="text-gray-300">
                   If you have any questions or concerns about this Privacy Policy, please contact us at:
-                  hi@rockrexgames.com
+                  rockrexgames@gmail.com
                 </p>
               </section>
 
