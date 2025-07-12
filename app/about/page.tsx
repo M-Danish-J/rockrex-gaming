@@ -6,7 +6,7 @@ import Breadcrumbs from "@/components/breadcrumbs"
 
 export default function About() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-black to-gray-900">
+    <main className="min-h-screen bg-gradient-to-b from-black to-amber-700">
       <div className="relative z-20">
         <Header />
 
@@ -19,7 +19,7 @@ export default function About() {
               alt="About Us Hero"
               fill
               priority
-              className="object-cover brightness-50"
+              className="object-cover brightness-90"
             />
           </div>
 
@@ -56,7 +56,7 @@ export default function About() {
 
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=600&width=600&text=Our+Story"
+                src="/image1.jpg"
                 alt="Our story"
                 width={600}
                 height={600}
@@ -108,19 +108,40 @@ export default function About() {
             <h2 className="text-3xl font-bold mb-12">Our Team</h2>
 
             <div className="grid md:grid-cols-4 gap-8">
-              {[1, 2, 3, 4].map((member) => (
-                <div key={member} className="team-member">
-                  <div className="relative mb-4 overflow-hidden rounded-lg">
+              {[
+                {
+                  name: "Minhas",
+                  role: "Co-Founder",
+                  image: "/minhas.jpg",
+                },
+                {
+                  name: "Amir",
+                  role: "Developer",
+                  image: "/amir.jpg",
+                },
+                {
+                  name: "Sikandar",
+                  role: "Developer",
+                  image: "/sikandar.jpg",
+                },
+                {
+                  name: "Ali Raza",
+                  role: "Developer",
+                  image: "/ali.jpg",
+                },
+              ].map((member) => (
+                <div key={member.name} className="team-member">
+                  <div className="relative mb-4 overflow-hidden rounded-lg w-full aspect-square">
                     <Image
-                      src={`/placeholder.svg?height=400&width=400&text=Team+Member+${member}`}
-                      alt={`Team Member ${member}`}
-                      width={400}
-                      height={400}
-                      className="w-full transition-transform duration-500 hover:scale-110"
+                      src={member.image}
+                      alt={member.name}
+                      fill
+                      className="object-cover w-full h-full transition-transform duration-500 hover:scale-110"
+                      sizes="(min-width: 768px) 400px, 100vw"
                     />
                   </div>
-                  <h3 className="text-xl font-bold">Team Member {member}</h3>
-                  <p className="text-amber-400">Position Title</p>
+                  <h3 className="text-xl font-bold">{member.name}</h3>
+                  <p className="text-amber-400">{member.role}</p>
                 </div>
               ))}
             </div>

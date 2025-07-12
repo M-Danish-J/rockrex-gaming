@@ -5,7 +5,7 @@ import Breadcrumbs from "@/components/breadcrumbs"
 
 export default function Privacy() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-black to-gray-900">
+    <main className="min-h-screen bg-gradient-to-b from-black to-amber-700">
       <div className="relative z-20">
         <Header />
 
@@ -18,7 +18,7 @@ export default function Privacy() {
               alt="Privacy Policy Hero"
               fill
               priority
-              className="object-cover brightness-50"
+              className="object-cover brightness-90"
             />
           </div>
 

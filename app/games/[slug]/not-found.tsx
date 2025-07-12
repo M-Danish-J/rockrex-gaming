@@ -6,7 +6,7 @@ import Footer from "@/components/footer"
 
 export default function GameNotFound() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-black to-gray-900">
+    <main className="min-h-screen bg-gradient-to-b from-black to-amber-700">
       <div className="relative z-20">
         <Header />
 

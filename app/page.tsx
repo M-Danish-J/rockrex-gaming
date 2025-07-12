@@ -7,16 +7,16 @@ export default function Home() {
   return (
     <main className="min-h-screen relative overflow-hidden">
       {/* Background overlay */}
-      <div className="absolute inset-0 bg-black/70 z-10"></div>
+      <div className="absolute inset-0 bg-black/80 z-10"></div>
 
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/image3.png"
+          src="/main.png"
           alt="Gaming background"
           fill
           priority
-          className="object-fill"
+          className="object-cover"
         />
       </div>
 
@@ -80,7 +80,7 @@ export default function Home() {
         </section>
 
         {/* Featured Games Section */}
-        <section className="px-6 md:px-20 py-20 bg-black/50">
+        <section className="px-6 md:px-20 py-20 ">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
               OUR <span className="text-amber-500">FEATURED</span> GAMES
