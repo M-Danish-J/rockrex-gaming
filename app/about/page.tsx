@@ -17,14 +17,14 @@ const teamMembers = [
     image: "/minhas.jpg",
   },
   {
+    name: "Sikandar",
+    role: "Co-Founder",
+    image: "/sikandar.jpg",
+  },
+  {
     name: "Amir",
     role: "Senior Marketing Specialist",
     image: "/amir.jpg",
-  },
-  {
-    name: "Sikandar",
-    role: "Senior Developer",
-    image: "/sikandar.jpg",
   },
   {
     name: "Ali Raza",
