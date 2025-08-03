@@ -1,7 +1,7 @@
-import Image from "next/image"
-import Link from "next/link"
-import Header from "@/components/header"
-import Footer from "@/components/footer"
+import Image from "next/image";
+import Link from "next/link";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -35,8 +35,10 @@ export default function Home() {
               </h1>
 
               <p className="text-gray-300 mb-8 max-w-lg">
-                We design & develop quality video games using creative ideas, latest technology and innovative
-                techniques. Being games fanatic, we are continuously growing and reaching at the top of gaming world.
+                We design & develop quality video games using creative ideas,
+                latest technology and innovative techniques. Being games
+                fanatic, we are continuously growing and reaching at the top of
+                gaming world.
               </p>
 
               <Link href="/games" className="btn-primary">
@@ -87,20 +89,36 @@ export default function Home() {
             </h2>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[1, 2, 3].map((game) => (
-                <div key={game} className="game-card group">
+              {[
+                {
+                  src: "/Farm Simulator 25.webp",
+                  title: "Farm Simulator 25",
+                  genre: "Simulation / Casual",
+                },
+                {
+                  src: "/Sniper 3D: FPS Shooting Game.webp",
+                  title: "Sniper 3D: FPS Shooting Game",
+                  genre: "Action / Shooter",
+                },
+                {
+                  src: "/Football Soccer League 2025.webp",
+                  title: "Football Soccer League 2025",
+                  genre: "Sports / Multiplayer",
+                },
+              ].map((game, idx) => (
+                <div key={game.title} className="game-card group">
                   <div className="relative overflow-hidden mb-4">
                     <Image
-                      src={`/placeholder.svg?height=300&width=500&text=Game+${game}`}
-                      alt={`Featured Game ${game}`}
+                      src={game.src}
+                      alt={game.title}
                       width={500}
                       height={300}
                       className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                     <div className="absolute bottom-4 left-4">
-                      <h3 className="text-xl font-bold">Awesome Game {game}</h3>
-                      <p className="text-amber-400">Action / Adventure</p>
+                      <h3 className="text-xl font-bold">{game.title}</h3>
+                      <p className="text-amber-400">{game.genre}</p>
                     </div>
                   </div>
                 </div>
@@ -124,13 +142,16 @@ export default function Home() {
               </h2>
 
               <p className="text-gray-300 mb-6">
-                RockRex Games is a passionate team of game developers, designers, and storytellers dedicated to creating
-                immersive gaming experiences that push the boundaries of entertainment.
+                RockRex Games is a passionate team of game developers,
+                designers, and storytellers dedicated to creating immersive
+                gaming experiences that push the boundaries of entertainment.
               </p>
 
               <p className="text-gray-300 mb-8">
-                Founded in 2023, we've quickly established ourselves as innovators in the gaming industry, combining
-                cutting-edge technology with compelling narratives to deliver unforgettable games.
+                Founded in 2020, we've quickly established ourselves as
+                innovators in the gaming industry, combining cutting-edge
+                technology with compelling narratives to deliver unforgettable
+                games.
               </p>
 
               <Link href="/about" className="btn-primary">
@@ -158,5 +179,5 @@ export default function Home() {
         <Footer />
       </div>
     </main>
-  )
+  );
 }

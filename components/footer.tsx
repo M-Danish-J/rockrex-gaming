@@ -1,5 +1,5 @@
-import Link from "next/link"
-import { Facebook, Linkedin } from "lucide-react"
+import Link from "next/link";
+import { Facebook, Linkedin } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -9,7 +9,9 @@ export default function Footer() {
           <div>
             <Link href="/">
               <div className="flex items-center mb-4">
-                <div className="bg-amber-500 text-black font-bold text-2xl p-1 mr-2">RX</div>
+                <div className="bg-amber-500 text-black font-bold text-2xl p-1 mr-2">
+                  RX
+                </div>
                 <div>
                   <span className="font-bold">ROCKREX</span>
                   <span className="text-xs block">GAMES</span>
@@ -18,14 +20,21 @@ export default function Footer() {
             </Link>
 
             <p className="text-gray-400 text-sm mb-4">
-              Creating immersive gaming experiences that captivate players around the world.
+              Creating immersive gaming experiences that captivate players
+              around the world.
             </p>
 
             <div className="flex space-x-4">
-              <Link href="#" className="text-gray-400 hover:text-amber-400">
+              <Link
+                href="https://www.facebook.com/profile.php?id=61578635801448&mibextid=ZbWKwL"
+                className="text-gray-400 hover:text-amber-400"
+              >
                 <Facebook size={20} />
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-amber-400">
+              <Link
+                href="https://www.linkedin.com/company/rockrex-games"
+                className="text-gray-400 hover:text-amber-400"
+              >
                 <Linkedin size={20} />
               </Link>
             </div>
@@ -86,11 +95,14 @@ export default function Footer() {
           <div>
             <h3 className="font-bold mb-4 text-lg">Contact Us</h3>
             <address className="text-gray-400 not-italic">
-              <p className="mb-2">123 Game Street</p>
-              <p className="mb-2">San Francisco, CA 94107</p>
-              <p className="mb-2">United States</p>
+              <p className="mb-2">Hassan Commercial</p>
+              <p className="mb-2">Al Rehman Garden, Lahore</p>
+              <p className="mb-2">Pakistan</p>
               <p className="mb-2">
-                <a href="mailto:rockrexgames@gmail.com" className="hover:text-amber-400">
+                <a
+                  href="mailto:rockrexgames@gmail.com"
+                  className="hover:text-amber-400"
+                >
                   rockrexgames@gmail.com
                 </a>
               </p>
@@ -99,9 +111,12 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-6 text-center text-gray-500 text-sm">
-          <p>&copy; {new Date().getFullYear()} RockRex Games. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} RockRex Games. All rights
+            reserved.
+          </p>
         </div>
       </div>
     </footer>
-  )
+  );
 }

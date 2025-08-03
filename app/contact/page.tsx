@@ -1,8 +1,8 @@
-import { Mail, MapPin, Phone } from "lucide-react"
-import Header from "@/components/header"
-import Footer from "@/components/footer"
-import Breadcrumbs from "@/components/breadcrumbs"
-import Image from "next/image"
+import { Mail, MapPin, Phone } from "lucide-react";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+import Breadcrumbs from "@/components/breadcrumbs";
+import Image from "next/image";
 
 export default function Contact() {
   return (
@@ -32,7 +32,9 @@ export default function Contact() {
               CONTACT <span className="text-amber-500">US</span>
             </h1>
 
-            <Breadcrumbs items={[{ label: "Contact", href: "/contact", isCurrent: true }]} />
+            <Breadcrumbs
+              items={[{ label: "Contact", href: "/contact", isCurrent: true }]}
+            />
           </div>
         </div>
 
@@ -41,8 +43,9 @@ export default function Contact() {
             <div>
               <h2 className="text-2xl font-bold mb-6">Get In Touch</h2>
               <p className="text-gray-300 mb-8">
-                Have questions about our games or interested in working with us? We'd love to hear from you! Fill out
-                the form and our team will get back to you as soon as possible.
+                Have questions about our games or interested in working with us?
+                We'd love to hear from you! Fill out the form and our team will
+                get back to you as soon as possible.
               </p>
 
               <div className="space-y-6">
@@ -52,7 +55,9 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-bold mb-1">Our Location</h3>
-                    <p className="text-gray-300">123 Game Street, San Francisco, CA 94107, United States</p>
+                    <p className="text-gray-300">
+                      Al Rehman Garden, Lahore, Pakistan
+                    </p>
                   </div>
                 </div>
 
@@ -143,5 +148,5 @@ export default function Contact() {
         <Footer />
       </div>
     </main>
-  )
+  );
 }

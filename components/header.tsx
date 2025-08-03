@@ -1,18 +1,27 @@
-import Link from "next/link"
-import { Facebook, Linkedin, Mail } from "lucide-react"
+import Link from "next/link";
+import { Facebook, Linkedin, Mail } from "lucide-react";
 
 export default function Header() {
   return (
     <>
       {/* Top bar with contact info */}
       <div className="flex justify-end items-center p-3 border-b border-gray-800 text-sm">
-        <Link href="https://facebook.com" className="mx-2 hover:text-amber-400">
+        <Link
+          href="https://www.facebook.com/profile.php?id=61578635801448&mibextid=ZbWKwL"
+          className="mx-2 hover:text-amber-400"
+        >
           <Facebook size={16} />
         </Link>
-        <Link href="https://linkedin.com" className="mx-2 hover:text-amber-400">
+        <Link
+          href="https://www.linkedin.com/company/rockrex-games/"
+          className="mx-2 hover:text-amber-400"
+        >
           <Linkedin size={16} />
         </Link>
-        <Link href="mailto:rockrexgames@gmail.com" className="mx-2 hover:text-amber-400 flex items-center">
+        <Link
+          href="mailto:rockrexgames@gmail.com"
+          className="mx-2 hover:text-amber-400 flex items-center"
+        >
           <Mail size={16} className="mr-1" />
           rockrexgames@gmail.com
         </Link>
@@ -23,7 +32,9 @@ export default function Header() {
         <div className="logo mb-4 md:mb-0">
           <Link href="/">
             <div className="flex items-center">
-              <div className="bg-amber-500 text-black font-bold text-3xl p-2 mr-2">RX</div>
+              <div className="bg-amber-500 text-black font-bold text-3xl p-2 mr-2">
+                RX
+              </div>
               <div className="text-xl">
                 <span className="font-bold">ROCKREX</span>
                 <span className="text-sm block">GAMES</span>
@@ -51,5 +62,5 @@ export default function Header() {
         </nav>
       </header>
     </>
-  )
+  );
 }

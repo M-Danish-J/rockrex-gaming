@@ -1,8 +1,61 @@
-import Link from "next/link"
-import Image from "next/image"
-import Header from "@/components/header"
-import Footer from "@/components/footer"
-import Breadcrumbs from "@/components/breadcrumbs"
+"use client";
+
+import Link from "next/link";
+import Image from "next/image";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+import Breadcrumbs from "@/components/breadcrumbs";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation, Pagination } from "swiper/modules";
+
+const teamMembers = [
+  {
+    name: "Minhas",
+    role: "Co-Founder",
+    image: "/minhas.jpg",
+  },
+  {
+    name: "Amir",
+    role: "Senior Marketing Specialist",
+    image: "/amir.jpg",
+  },
+  {
+    name: "Sikandar",
+    role: "Senior Developer",
+    image: "/sikandar.jpg",
+  },
+  {
+    name: "Ali Raza",
+    role: "Developer",
+    image: "/ali.jpg",
+  },
+  {
+    name: "Waleed Ali",
+    role: "3D Artist",
+    image: "/waleed.jpeg",
+  },
+  {
+    name: "Hasnain Khan",
+    role: "UI/UX Designer",
+    image: "/khosa.png",
+  },
+  {
+    name: "Zain Khan",
+    role: "Junior ASO",
+    image: "/zain.jpeg",
+  },
+  {
+    name: "Ahmad Khan",
+    role: "UI/UX Designer",
+    image: "/ahmad.jpg",
+  },
+];
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 export default function About() {
   return (
@@ -32,7 +85,9 @@ export default function About() {
               ABOUT <span className="text-amber-500">ROCKREX</span> GAMES
             </h1>
 
-            <Breadcrumbs items={[{ label: "About", href: "/about", isCurrent: true }]} />
+            <Breadcrumbs
+              items={[{ label: "About", href: "/about", isCurrent: true }]}
+            />
           </div>
         </div>
 
@@ -41,16 +96,18 @@ export default function About() {
             <div>
               <h2 className="text-2xl font-bold mb-6">Our Story</h2>
               <p className="text-gray-300 mb-4">
-                Founded in 2023, RockRex Games was born from a passion for creating immersive gaming experiences that
-                push the boundaries of entertainment and technology.
+                Founded in 2020, RockRex Games was born from a passion for
+                creating immersive gaming experiences that push the boundaries
+                of entertainment and technology.
               </p>
               <p className="text-gray-300 mb-4">
-                What started as a small team of dedicated developers has grown into a dynamic studio known for
-                innovative gameplay, stunning visuals, and compelling narratives.
+                What started as a small team of dedicated developers has grown
+                into a dynamic studio known for innovative gameplay, stunning
+                visuals, and compelling narratives.
               </p>
               <p className="text-gray-300">
-                Our mission is to create games that not only entertain but also inspire, challenge, and connect players
-                around the world.
+                Our mission is to create games that not only entertain but also
+                inspire, challenge, and connect players around the world.
               </p>
             </div>
 
@@ -75,8 +132,8 @@ export default function About() {
                 </div>
                 <h3 className="text-xl font-bold mb-4">Innovation</h3>
                 <p className="text-gray-300">
-                  We constantly push the boundaries of what's possible in gaming, embracing new technologies and
-                  creative approaches.
+                  We constantly push the boundaries of what's possible in
+                  gaming, embracing new technologies and creative approaches.
                 </p>
               </div>
 
@@ -86,8 +143,8 @@ export default function About() {
                 </div>
                 <h3 className="text-xl font-bold mb-4">Quality</h3>
                 <p className="text-gray-300">
-                  We are committed to excellence in every aspect of our games, from gameplay mechanics to visual design
-                  and storytelling.
+                  We are committed to excellence in every aspect of our games,
+                  from gameplay mechanics to visual design and storytelling.
                 </p>
               </div>
 
@@ -97,8 +154,8 @@ export default function About() {
                 </div>
                 <h3 className="text-xl font-bold mb-4">Community</h3>
                 <p className="text-gray-300">
-                  We value our players and believe in creating games that bring people together, fostering connections
-                  and shared experiences.
+                  We value our players and believe in creating games that bring
+                  people together, fostering connections and shared experiences.
                 </p>
               </div>
             </div>
@@ -107,43 +164,37 @@ export default function About() {
           <div className="text-center">
             <h2 className="text-3xl font-bold mb-12">Our Team</h2>
 
-            <div className="grid md:grid-cols-4 gap-8">
-              {[
-                {
-                  name: "Minhas",
-                  role: "Co-Founder",
-                  image: "/minhas.jpg",
-                },
-                {
-                  name: "Amir",
-                  role: "Developer",
-                  image: "/amir.jpg",
-                },
-                {
-                  name: "Sikandar",
-                  role: "Developer",
-                  image: "/sikandar.jpg",
-                },
-                {
-                  name: "Ali Raza",
-                  role: "Developer",
-                  image: "/ali.jpg",
-                },
-              ].map((member) => (
-                <div key={member.name} className="team-member">
-                  <div className="relative mb-4 overflow-hidden rounded-lg w-full aspect-square">
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      fill
-                      className="object-cover w-full h-full transition-transform duration-500 hover:scale-110"
-                      sizes="(min-width: 768px) 400px, 100vw"
-                    />
-                  </div>
-                  <h3 className="text-xl font-bold">{member.name}</h3>
-                  <p className="text-amber-400">{member.role}</p>
-                </div>
-              ))}
+            <div className="relative max-w-4xl mx-auto">
+              <Swiper
+                modules={[Navigation, Pagination]}
+                spaceBetween={30}
+                slidesPerView={1}
+                navigation
+                pagination={{ clickable: true }}
+                breakpoints={{
+                  768: { slidesPerView: 2 },
+                  1024: { slidesPerView: 4 },
+                }}
+                className="!pb-12"
+              >
+                {teamMembers.map((member) => (
+                  <SwiperSlide key={member.name}>
+                    <div className="team-member text-center">
+                      <div className="relative mb-4 overflow-hidden rounded-lg w-full aspect-square">
+                        <Image
+                          src={member.image}
+                          alt={member.name}
+                          fill
+                          className="object-cover w-full h-full transition-transform duration-500 hover:scale-110"
+                          sizes="(min-width: 768px) 400px, 100vw"
+                        />
+                      </div>
+                      <h3 className="text-xl font-bold">{member.name}</h3>
+                      <p className="text-amber-400">{member.role}</p>
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
             </div>
 
             <div className="mt-12">
@@ -157,5 +208,5 @@ export default function About() {
         <Footer />
       </div>
     </main>
-  )
+  );
 }
